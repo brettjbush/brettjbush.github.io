@@ -13,8 +13,6 @@ comments: true
     {{ content }}
   </article>
 
-  {% if post.comments %}
-  {% include comment_section.html %}
-  {% endif %}
+  {% include comments.html %}
 
 </div>
