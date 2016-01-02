@@ -2,8 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+    -moz-box-shadow: 0px 2px 5px 0px $grey-color;
+    box-shadow: 0px 2px 5px 0px $grey-color;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -51,6 +52,7 @@
             -ms-transition: 0.1s linear; /* IE 10 */
             -moz-transition: 0.1s linear; /* Firefox */
             -webkit-transition: 0.1s linear; /*safari and chrome */
+
             color: $grey-color-dark;
         }
     }
