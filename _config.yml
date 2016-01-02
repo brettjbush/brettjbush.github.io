@@ -11,3 +11,9 @@ github_username:  brettjbush
 
 # Build settings
 markdown: kramdown
+
+# Central Time Zone
+timezone: America/Chicago
+
+# Set path as title
+permalink: /:categories/:title/
