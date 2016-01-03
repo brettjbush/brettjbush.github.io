@@ -190,16 +190,20 @@ pre {
 /**
  * Icons
  */
-.icon {
+.hovericon {
+        color: $grey-color-midlight;
+        transition: 0.25s linear; /* vendorless fallback */
+        -o-transition: 0.25s linear; /* opera */
+        -ms-transition: 0.25s linear; /* IE 10 */
+        -moz-transition: 0.25s linear; /* Firefox */
+        -webkit-transition: 0.25s linear; /*safari and chrome */
 
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
+        &:hover {
+            color: $grey-color-dark;
+            transition: 0.1s linear; /* vendorless fallback */
+            -o-transition: 0.1s linear; /* opera */
+            -ms-transition: 0.1s linear; /* IE 10 */
+            -moz-transition: 0.1s linear; /* Firefox */
+            -webkit-transition: 0.1s linear; /*safari and chrome */
         }
-    }
 }
