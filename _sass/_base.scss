@@ -206,4 +206,8 @@ pre {
             -moz-transition: 0.1s linear; /* Firefox */
             -webkit-transition: 0.1s linear; /*safari and chrome */
         }
+
+        @include media-query($on-palm) {
+          color: $grey-color-dark;
+        }
 }
