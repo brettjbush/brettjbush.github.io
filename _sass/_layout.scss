@@ -91,14 +91,8 @@
         }
 
         &:hover .trigger {
-            @if $toggle-on 
-             display: none;
-             padding-bottom: 0px;
-             $toggle-on: false;
-            @else
-             display: block;
-             padding: 5px;
-             $toggle-on: true;
+            display: block;
+            padding: 5px;
         }
 
         .page-link {
