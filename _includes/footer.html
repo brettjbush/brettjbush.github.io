@@ -2,15 +2,18 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
+<!-- No public email currently
       <div class="footer-col  footer-col-1">
+        <h2 class="footer-heading">{{ site.title }}</h2>
+
         <ul class="contact-list">
           <li>{{ site.title }}</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
+
       </div>
+    -->
       <div class="footer-col  footer-col-2">
         <table class="social-media-list">
           <tr>
@@ -39,6 +42,14 @@
             <td>
                   <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">
                     <i class="hovericon fa fa-linkedin-square fa-3x fa-fw"></i>
+                  </a>
+                </span>
+            </td>
+            {% endif %}
+            {% if site.miiverse_username %}
+            <td>
+                  <a href="https://miiverse.nintendo.net/users/{{ site.miiverse_username }}" target="_blank">
+                    <i class="hovericon fa fa-gamepad fa-3x fa-fw"></i>
                   </a>
                 </span>
             </td>

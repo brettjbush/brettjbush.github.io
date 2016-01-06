@@ -208,6 +208,6 @@ pre {
         }
 
         @include media-query($on-palm) {
-          color: $grey-color-dark;
+          color: $grey-color-dark
         }
 }

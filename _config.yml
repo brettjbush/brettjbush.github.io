@@ -1,5 +1,5 @@
 # Site settings
-title: Brett's Site
+title: bbush.me
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -11,6 +11,7 @@ github_username:  brettjbush
 pinterest_username:  brettjbush
 spotify_username:  1214399655
 linkedin_username:  brett-bush-6a1500b0
+miiverse_username:  thesquareb
 
 # Build settings
 markdown: kramdown

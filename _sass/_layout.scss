@@ -179,6 +179,9 @@
  * Page content
  */
 .page-content {
+}
+
+.padded-page-content {
     padding: $spacing-unit 0;
 }
 
@@ -211,13 +214,13 @@
  * Posts
  */
 .post-header {
-    margin-bottom: $spacing-unit;
 }
 
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
+    padding-top: $spacing-unit;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -226,6 +229,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit / 2;
 
     h2 {
         font-size: 32px;
@@ -253,7 +257,25 @@
 }
 
 .post-banner {
-  position: absolute;
-  left: 0;
   width: 100%;
+  -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+  -moz-box-shadow: 0px 2px 5px 0px $grey-color;
+  box-shadow: 0px 2px 5px 0px $grey-color;
+}
+
+.author-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+
+    @include media-query($on-laptop) {
+        width: 25px;
+        height: 25px;
+        margin-left: 5px;
+    }
+}
+
+.author-section {
+  font-size: $small-font-size;
+  color: $grey-color;
 }
