@@ -7,6 +7,15 @@
         // var disqus_developer = 1; // Comment out when the site is live
         var disqus_identifier = "{{ page.url }}";
 
+        var reset_disqus = function(){
+          DISQUS.reset({
+            reload: true;
+            config: function () {
+              this.page.identifier = '{{ article.url }}';
+            }
+          });
+        }
+
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
