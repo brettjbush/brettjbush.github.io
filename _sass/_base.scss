@@ -171,7 +171,16 @@ pre {
     }
 }
 
-
+.disqus_thread {
+    /* portrait */
+  @media screen and (orientation:portrait) {
+  	width: 100%
+  }
+  /* landscape */
+  @media screen and (orientation:landscape) {
+  	width: 100%
+  }
+}
 
 /**
  * Clearfix
