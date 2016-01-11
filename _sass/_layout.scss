@@ -205,7 +205,10 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 10px;
+    -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+    -moz-box-shadow: 0px 2px 5px 0px $grey-color;
+    box-shadow: 0px 2px 5px 0px $grey-color;
 }
 
 
@@ -225,6 +228,10 @@
     @include media-query($on-laptop) {
         font-size: 36px;
     }
+}
+
+.post-link-div {
+    overflow: hidden;
 }
 
 .post-content {
@@ -258,6 +265,15 @@
 
 .post-banner {
   width: 100%;
+  -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+  -moz-box-shadow: 0px 2px 5px 0px $grey-color;
+  box-shadow: 0px 2px 5px 0px $grey-color;
+}
+
+.post-image-little {
+  width: 30%;
+  float:left;
+  margin-right: 5px;
   -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
   -moz-box-shadow: 0px 2px 5px 0px $grey-color;
   box-shadow: 0px 2px 5px 0px $grey-color;
