@@ -12,9 +12,24 @@ layout: default
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <div class="post-link-div">
               <img class="post-image-little" src="{{ site.baseurl }}/images/{{ post.image }}_banner.JPG" alt="{{ post.image_alt }}"></img>
-            <div>
-              {{ post.title }}
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <div class="post-link-meta-div">
+              <table>
+                <tr>
+                  <td>
+                    <span class="post-meta-title">{{ post.title }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="post-meta">by {{ post.author }}</span><img class="author-icon-page" src="{{ site.baseurl }}/images/{{ post.author }}_icon.png"></img>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </a>

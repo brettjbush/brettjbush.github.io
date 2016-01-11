@@ -194,21 +194,46 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        margin-bottom: 0px;
     }
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    font-size: 12px;
     color: $grey-color;
+}
+
+.post-meta-title {
+    font-size: 20px;
+    color: $grey-color;
+}
+
+.post-link-meta-div {
+  padding: 10px;
 }
 
 .post-link {
     display: block;
-    font-size: 10px;
-    -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
-    -moz-box-shadow: 0px 2px 5px 0px $grey-color;
-    box-shadow: 0px 2px 5px 0px $grey-color;
+
+    -webkit-box-shadow: 0px 0px 0px 0px $grey-color;
+    -moz-box-shadow: 0px 0px 0px 0px $grey-color;
+    box-shadow: 0px 0px 0px 0px $grey-color;
+    transition: 0.25s linear; /* vendorless fallback */
+    -o-transition: 0.25s linear; /* opera */
+    -ms-transition: 0.25s linear; /* IE 10 */
+    -moz-transition: 0.25s linear; /* Firefox */
+    -webkit-transition: 0.25s linear; /*safari and chrome */
+
+    &:hover {
+        -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+        -moz-box-shadow: 0px 2px 5px 0px $grey-color;
+        box-shadow: 0px 2px 5px 0px $grey-color;
+        transition: 0.1s linear; /* vendorless fallback */
+        -o-transition: 0.1s linear; /* opera */
+        -ms-transition: 0.1s linear; /* IE 10 */
+        -moz-transition: 0.1s linear; /* Firefox */
+        -webkit-transition: 0.1s linear; /*safari and chrome */
+    }
 }
 
 
@@ -271,7 +296,7 @@
 }
 
 .post-image-little {
-  width: 30%;
+  width: 35%;
   float:left;
   margin-right: 5px;
   -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
@@ -287,6 +312,18 @@
     @include media-query($on-laptop) {
         width: 25px;
         height: 25px;
+        margin-left: 5px;
+    }
+}
+
+.author-icon-page {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+
+    @include media-query($on-laptop) {
+        width: 20px;
+        height: 20px;
         margin-left: 5px;
     }
 }
