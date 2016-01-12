@@ -201,15 +201,34 @@
 .post-meta {
     font-size: 12px;
     color: $grey-color;
+
+    @include media-query($on-palm) {
+      font-size: 8px;
+    }
 }
 
 .post-meta-title {
     font-size: 20px;
     color: $grey-color;
+
+    @include media-query($on-palm) {
+      font-size: 12px;
+    }
 }
 
 .post-link-meta-div {
   padding: 10px;
+
+  @include media-query($on-palm) {
+
+    padding: 0px;
+    line-height: 0.8;
+
+    td {
+      padding: 0px;
+    }
+  }
+
 }
 
 .post-link {
@@ -322,8 +341,8 @@
     margin-left: 5px;
 
     @include media-query($on-laptop) {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         margin-left: 5px;
     }
 }
