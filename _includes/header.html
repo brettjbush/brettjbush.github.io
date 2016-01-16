@@ -14,12 +14,26 @@
       </a>
 
       <div id="hamburger-dropdown" class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+
+        {% for menucategory in page.menu-categories %}
+          {% if menucategory.name %}
+          <a class="page-link" href="{{ menucategory.url | prepend: site.baseurl }}">{{ menucategory.name }}</a>
           {% endif %}
         {% endfor %}
+
       </div>
+
+      {% for menucategory in page.menu-categories %}
+        {% if menucategory.menu-sub-categories %}
+          <div>
+            {% for subcategory in menucategory.menu-sub-categories %}
+              {% if subcategory.sub-name %}
+                <a class="page-link" href="{{ subcategory.sub-url | prepend: site.baseurl }}">{{ subcategory.sub-name }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endfor %}
     </nav>
 
   </div>

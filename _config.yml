@@ -21,4 +21,4 @@ markdown: kramdown
 timezone: America/Chicago
 
 # Set path as title
-permalink: /:categories/:title/
+permalink: /posts/:year/:month/:day/:title/

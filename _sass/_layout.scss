@@ -234,9 +234,12 @@
 .post-link {
     display: block;
 
-    -webkit-box-shadow: 0px 0px 0px 0px $grey-color;
-    -moz-box-shadow: 0px 0px 0px 0px $grey-color;
-    box-shadow: 0px 0px 0px 0px $grey-color;
+    //-webkit-box-shadow: 0px 0px 0px 0px $grey-color;
+    //-moz-box-shadow: 0px 0px 0px 0px $grey-color;
+    //box-shadow: 0px 0px 0px 0px $grey-color;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
+    margin-bottom: 5px;
     transition: 0.25s linear; /* vendorless fallback */
     -o-transition: 0.25s linear; /* opera */
     -ms-transition: 0.25s linear; /* IE 10 */
@@ -244,9 +247,11 @@
     -webkit-transition: 0.25s linear; /*safari and chrome */
 
     &:hover {
-        -webkit-box-shadow: 0px 2px 5px 0px $grey-color;
-        -moz-box-shadow: 0px 2px 5px 0px $grey-color;
-        box-shadow: 0px 2px 5px 0px $grey-color;
+        //-webkit-box-shadow: 0px 2px 5px 0px $grey-color;
+        //-moz-box-shadow: 0px 2px 5px 0px $grey-color;
+        //box-shadow: 0px 2px 5px 0px $grey-color;
+        border-top: 1px solid $grey-color-dark;
+        border-bottom: 1px solid $grey-color-dark;
         transition: 0.1s linear; /* vendorless fallback */
         -o-transition: 0.1s linear; /* opera */
         -ms-transition: 0.1s linear; /* IE 10 */
@@ -256,9 +261,9 @@
 
     @include media-query($on-palm) {
 
-      -webkit-box-shadow: 0px 0px 0px 0px $grey-color;
-      -moz-box-shadow: 0px 0px 0px 0px $grey-color;
-      box-shadow: 0px 0px 0px 0px $grey-color;
+      //-webkit-box-shadow: 0px 0px 0px 0px $grey-color;
+      //-moz-box-shadow: 0px 0px 0px 0px $grey-color;
+      //box-shadow: 0px 0px 0px 0px $grey-color;
       transition: 0s linear; /* vendorless fallback */
       -o-transition: 0s linear; /* opera */
       -ms-transition: 0s linear; /* IE 10 */
@@ -266,9 +271,9 @@
       -webkit-transition: 0s linear; /*safari and chrome */
 
       &:hover {
-          -webkit-box-shadow: 0px 0px 0px 0px $grey-color;
-          -moz-box-shadow: 0px 0px 0px 0px $grey-color;
-          box-shadow: 0px 0px 0px 0px $grey-color;
+          //-webkit-box-shadow: 0px 0px 0px 0px $grey-color;
+          //-moz-box-shadow: 0px 0px 0px 0px $grey-color;
+          //box-shadow: 0px 0px 0px 0px $grey-color;
           transition: 0s linear; /* vendorless fallback */
           -o-transition: 0s linear; /* opera */
           -ms-transition: 0s linear; /* IE 10 */
