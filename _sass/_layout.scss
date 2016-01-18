@@ -296,7 +296,7 @@
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
-    padding-top: $spacing-unit;
+    /* padding-top: $spacing-unit; */
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -379,4 +379,8 @@
 .author-section {
   font-size: $small-font-size;
   color: $grey-color;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }

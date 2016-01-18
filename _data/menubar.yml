@@ -1,0 +1,49 @@
+ - name: Code
+   url: /code/
+   menu-sub-categories:
+    - sub-name: C++
+      sub-url: /code/cpp/
+    - sub-name: Java
+      sub-url: /code/java/
+    - sub-name: Web
+      sub-url: /code/web/
+ - name: Arts
+   url: /arts/
+   menu-sub-categories:
+    - sub-name: Music
+      sub-url: /arts/music/
+    - sub-name: Theatre
+      sub-url: /arts/theatre/
+    - sub-name: Graphic Design
+      sub-url: /arts/graphic-design/
+    - sub-name: Cinema
+      sub-url: /arts/cinema/
+    - sub-name: Literature
+      sub-url: /arts/literature/
+ - name: Gaming
+   url: /gaming/
+   menu-sub-categories:
+    - sub-name: Pokemon
+      sub-url: /gaming/pokemon/
+    - sub-name: Splatoon
+      sub-url: /gaming/splatoon/
+    - sub-name: Final Fantasy
+      sub-url: /gaming/final-fantasy/
+    - sub-name: Game Design
+      sub-url: /gaming/game-design/
+ - name: Life
+   url: /life/
+   menu-sub-categories:
+    - sub-name: Coffee
+      sub-url: /life/coffee/
+    - sub-name: Tea
+      sub-url: /life/tea/
+ - name: Learning
+   url: /learning/
+   menu-sub-categories:
+     - sub-name: Education
+       sub-url: /learning/education/
+     - sub-name: Tutoring
+       sub-url: /learning/tutoring/
+ - name: Me
+   url: /me/
