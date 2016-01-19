@@ -26,6 +26,7 @@ function WidthChange(mq) {
 
 }
 
+// Credit: http://www.avoid.org/javascript-addclassremoveclass-functions/
 function hasClass(el, name) {
    return new RegExp('(\\s|^)'+name+'(\\s|$)').test(el.className);
 }
