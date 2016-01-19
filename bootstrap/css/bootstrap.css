@@ -1103,6 +1103,11 @@ tbody.collapse.in {
     border-bottom-color: #ffffff;
   }
 }
+@media (min-width: 768px) {
+  .dropdown-toggle {
+    @extend .disabled;
+  }
+}
 .nav-pills > li {
   float: left;
 }
