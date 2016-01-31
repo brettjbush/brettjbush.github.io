@@ -16,29 +16,11 @@
         <div class="collapse navbar-collapse" id="navigationbar">
           <ul class="nav navbar-nav">
             {% for menucategory in site.data.menubar %}
-              {% if menucategory.menu-sub-categories %}
-                <li class="dropdown">
-                  <a href="{{ menucategory.url | prepend: site.baseurl }}" class="dropdown-toggle disabled" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                    {{ menucategory.name }}
-                    <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    {% for subcategory in menucategory.menu-sub-categories %}
-                      <li>
-                        <a href="{{ subcategory.sub-url | prepend: site.baseurl }}">
-                          {{ subcategory.sub-name }}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-              {% else %}
                <li>
                  <a href="{{ menucategory.url | prepend: site.baseurl }}">
                    {{ menucategory.name }}
                  </a>
                </li>
-              {% endif %}
             {% endfor %}
           </ul>
         </div>

@@ -42,3 +42,9 @@ function removeClass(el, name)
       el.className=el.className.replace(new RegExp('(\\s|^)'+name+'(\\s|$)'),' ').replace(/^\s+|\s+$/g, '');
    }
 }
+
+function search()
+{
+	var searchtext = document.getElementById('search-box').value;
+	alert(searchtext);
+}
