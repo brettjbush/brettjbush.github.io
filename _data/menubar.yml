@@ -45,5 +45,7 @@
        sub-url: /learning/education/
      - sub-name: Tutoring
        sub-url: /learning/tutoring/
+ - name: "#Search"
+   url: /tag-search/
  - name: Me
    url: /me/

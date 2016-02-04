@@ -46,5 +46,8 @@ function removeClass(el, name)
 function search()
 {
 	var searchtext = document.getElementById('search-box').value;
-	alert(searchtext);
+	var formattedsearchtext = searchtext.replace(/[^\w\s]/gi, '').toLowerCase();
+	window.location.href = 'search-result.html?search=' + formattedsearchtext;;
+	//'localhost:4000/search-result.html?search=' + formattedsearchtext;
+	//alert(searchtext);
 }
