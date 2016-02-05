@@ -1,20 +1,30 @@
 ---
 layout: default
+title: "#Search"
 ---
 <div class="wrapper">
 <div class="home padded-page-content">
 
   <h1 class="page-heading">{{ page.title }}</h1>
 
-  <ul class="post-list">
+  <!--<ul class="post-list">-->
+  {% assign letter = "NULL" %}
     {% for tag in site.tags %}
-      <li>
+      {% capture first_letter %}{{ tag | slice: 0 }}{% endcapture %}
+      {% if letter != first_letter %}
+        {% if letter != "NULL" %}
+          </div>
+        {% endif %}
+        {% capture letter %}{{ first_letter }}{% endcapture %}
+        <div>
+          <h3>{{ letter }}</h3>
+      {% endif %}
         <a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag | first }}/">
           #{{ tag | first }}
         </a>
-      </li>
     {% endfor %}
-  </ul>
+  </div>
+  <!--</ul>-->
 
 </div>
 </div>
