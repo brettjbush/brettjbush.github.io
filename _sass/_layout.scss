@@ -425,3 +425,17 @@
 ul.nav.navbar-nav {
   text-align: center;
 }
+
+nav.site-nav.navbar.navbar-default {
+
+  @include media-query(767px) {
+      width: 100%;
+  }
+}
+
+a.site-title {
+  @include media-query(767px) {
+    position: absolute;
+    z-index: -1;
+  }
+}
