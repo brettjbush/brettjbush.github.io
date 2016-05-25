@@ -17,7 +17,8 @@
           <ul class="nav navbar-nav">
             {% for menucategory in site.data.menubar %}
                <li>
-                 <a href="{{ menucategory.url | prepend: site.baseurl }}">
+                 {% assign loopindex = forloop.index %}
+                 <a href="{{ menucategory.url | prepend: site.baseurl }}" {% if loopindex == 1 %}style="border-top-width: 0px;"{% endif %}>
                    {{ menucategory.name }}
                  </a>
                </li>

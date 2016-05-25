@@ -442,6 +442,22 @@ a.site-title {
 
 div.container-fluid {
   @include media-query(767px) {
-    margin-left: 30px;
+  }
+}
+
+ul.nav.navbar-nav {
+  li {
+    @include media-query(767px) {
+      width: calc(100% - 30px);
+      padding-left: 90px;
+    }
+
+    a {
+      @include media-query(767px) {
+        border-top-color: $grey-color;
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+    }
   }
 }
