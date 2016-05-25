@@ -454,7 +454,7 @@ ul.nav.navbar-nav {
 
     a {
       @include media-query(767px) {
-        border-top-color: $grey-color-midlight;
+        border-top-color: $grey-color-light;
         border-top-width: 1px;
         border-top-style: solid;
       }
