@@ -1,1 +1,3 @@
 Banner image dimensions: 3264x1400 (or 1500?)
+
+Banner image dimensions: 640 × 294
