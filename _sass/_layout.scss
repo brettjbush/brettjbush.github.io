@@ -322,6 +322,7 @@
 }
 
 .post-title {
+    display: inline-block;
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -460,4 +461,14 @@ ul.nav.navbar-nav {
       }
     }
   }
+}
+
+.tag-letter-header {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.tag-header-horizontal-bar {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }

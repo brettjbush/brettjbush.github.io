@@ -22,7 +22,8 @@ title: "#Search"
         {% endif %}
         {% capture letter %}{{ first_letter }}{% endcapture %}
         <div>
-          <h3>{{ letter }}</h3>
+          <h3 class="tag-letter-header">{{ letter }}</h3>
+          <hr class="tag-header-horizontal-bar ">
       {% endif %}
         <a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag }}/">
           #{{ tag }}
