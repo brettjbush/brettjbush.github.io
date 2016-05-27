@@ -197,6 +197,8 @@
     -ms-transition: 0.2s linear; /* IE 10 */
     -moz-transition: 0.2s linear; /* Firefox */
     -webkit-transition: 0.2s linear; /*safari and chrome */
+
+    margin-top: 5px;
 }
 
 .post-meta-title {
@@ -322,11 +324,11 @@
 }
 
 .post-title {
-    display: inline-block;
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
     /* padding-top: $spacing-unit; */
+    margin-bottom: 2px;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -363,6 +365,10 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+
+    p {
+      font-size: 17px;
     }
 }
 
@@ -471,4 +477,17 @@ ul.nav.navbar-nav {
 .tag-header-horizontal-bar {
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+.mid-post-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.image-caption {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
 }

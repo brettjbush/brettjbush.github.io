@@ -22,9 +22,10 @@ layout: default
                     <span class="post-meta-title">{{ post.title }}</span>
                   </td>
                 </tr>
+                <!-- Tags
                 <tr>
                   <td>
-                    <!-- Tags -->
+
                     {% for tag in post.tags %}
                     <a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag }}/">
                       #{{ tag }}
@@ -32,6 +33,7 @@ layout: default
                     {% endfor %}
                   </td>
                 </tr>
+              -->
                 <tr>
                   <td>
                     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
