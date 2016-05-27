@@ -15,14 +15,15 @@ comments: true
     </a>
     {% endfor %}
     <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    {% if page.author %}
-      <div class="author-section">
-        by {{ page.author }}<img class="author-icon" src="{{ site.baseurl }}/images/{{ page.author }}_icon.png"></img>
-      </div>
-    {% endif %}
   </header>
   <article class="post-content wrapper">
     {{ content }}
+    {% if page.author %}
+      <div class="author-section">
+        - {{ page.author }}<img class="author-icon" src="{{ site.baseurl }}/images/{{ page.author }}_icon.png"></img>
+      </div>
+    {% endif %}
+
   </article>
 
   {% include comments.html %}

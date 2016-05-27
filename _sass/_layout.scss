@@ -199,6 +199,7 @@
     -webkit-transition: 0.2s linear; /*safari and chrome */
 
     margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .post-meta-title {
@@ -490,4 +491,15 @@ ul.nav.navbar-nav {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
+}
+
+.tag-link {
+  border: 1px solid $grey-color-light;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 25px;
+  background-color: $grey-color-midlight;
+  color: #FFFFFF;
 }
