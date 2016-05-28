@@ -18,9 +18,16 @@
     margin-bottom: 0;
     float: left;
 
+// What's going on with this?
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+
+    @include media-query(767px) {
+      &:hover {
+        background-color: $grey-color-midlight;
+      }
     }
 }
 
@@ -465,6 +472,9 @@ ul.nav.navbar-nav {
         border-top-color: $grey-color-light;
         border-top-width: 1px;
         border-top-style: solid;
+        &:hover {
+          background-color: $grey-color-midlight;
+        }
       }
     }
   }
@@ -502,4 +512,8 @@ ul.nav.navbar-nav {
   border-radius: 25px;
   background-color: $grey-color-midlight;
   color: #FFFFFF;
+
+  &:visited {
+    color: #FFFFFF;
+  }
 }
