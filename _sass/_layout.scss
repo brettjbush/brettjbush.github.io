@@ -402,6 +402,10 @@
 
   border-radius: 50px;
 
+  @include media-query(767px) {
+    border-radius: 15px;
+  }
+
 }
 
 .author-icon {
@@ -501,6 +505,10 @@ ul.nav.navbar-nav {
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
+
+  @include media-query(767px) {
+    border-radius: 10px;
+  }
 }
 
 .image-caption {
