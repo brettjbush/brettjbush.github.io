@@ -116,6 +116,16 @@
 .social-media-list {
     list-style: none;
     margin-left: 0;
+
+    tbody {
+      tr {
+        td {
+          @include media-query(767px) {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+    }
 }
 
 .footer-col-wrapper {
@@ -310,6 +320,8 @@
       //-ms-transition: 0s linear; /* IE 10 */
       //-moz-transition: 0s linear; /* Firefox */
       //-webkit-transition: 0s linear; /*safari and chrome */
+
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
 
       &:hover {
           //-webkit-box-shadow: 0px 0px 0px 0px $grey-color;
@@ -531,7 +543,7 @@ ul.nav.navbar-nav {
   @include media-query(767px) {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
   }
-  
+
   &:visited {
     color: #FFFFFF;
   }
