@@ -472,7 +472,7 @@ ul.nav.navbar-nav {
         border-top-color: $grey-color-light;
         border-top-width: 1px;
         border-top-style: solid;
-        &:hover {
+        &:active {
           background-color: $grey-color-midlight;
         }
       }
