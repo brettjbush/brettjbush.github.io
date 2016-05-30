@@ -306,7 +306,10 @@
           -ms-transition: 0.1s linear; /* IE 10 */
           -moz-transition: 0.1s linear; /* Firefox */
           -webkit-transition: 0.1s linear; /*safari and chrome */
+
+          @include media-query-min($on-desktop) {
           border-radius: 5px;
+          }
         }
     }
 
