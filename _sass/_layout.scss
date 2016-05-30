@@ -528,6 +528,10 @@ ul.nav.navbar-nav {
   background-color: $grey-color-midlight;
   color: #FFFFFF;
 
+  @include media-query(767px) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
+  }
+  
   &:visited {
     color: #FFFFFF;
   }
