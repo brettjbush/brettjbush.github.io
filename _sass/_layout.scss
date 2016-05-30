@@ -25,9 +25,10 @@
     }
 
     @include media-query(767px) {
-      &:hover {
-        background-color: $grey-color-midlight;
-      }
+//      &:hover {
+//        background-color: $grey-color-midlight;
+//      }
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -475,7 +476,7 @@ ul.nav.navbar-nav {
   //      &:focus {
   //        background-color: $grey-color-midlight;
   //      }
-        -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
         //-webkit-tap-highlight-color: transparent; /* For some Androids */
       }
     }
