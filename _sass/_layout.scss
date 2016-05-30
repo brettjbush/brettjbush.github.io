@@ -199,6 +199,10 @@
 
     > li {
         margin-bottom: 0px;
+
+        @include media-query($on-palm) {
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
+        }
     }
 }
 
@@ -308,7 +312,7 @@
           -webkit-transition: 0.1s linear; /*safari and chrome */
 
           @include media-query-min($on-desktop) {
-          border-radius: 5px;
+            border-radius: 5px;
           }
         }
     }
@@ -323,8 +327,6 @@
       //-ms-transition: 0s linear; /* IE 10 */
       //-moz-transition: 0s linear; /* Firefox */
       //-webkit-transition: 0s linear; /*safari and chrome */
-
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
 
       &:hover {
           //-webkit-box-shadow: 0px 0px 0px 0px $grey-color;
