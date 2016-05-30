@@ -472,9 +472,11 @@ ul.nav.navbar-nav {
         border-top-color: $grey-color-light;
         border-top-width: 1px;
         border-top-style: solid;
-        &:focus {
-          background-color: $grey-color-midlight;
-        }
+  //      &:focus {
+  //        background-color: $grey-color-midlight;
+  //      }
+        -webkit-tap-highlight-color: rgba(201, 224, 253, 0.8);
+        //-webkit-tap-highlight-color: transparent; /* For some Androids */
       }
     }
   }
