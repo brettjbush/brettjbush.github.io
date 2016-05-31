@@ -1,3 +1,4 @@
-Banner image dimensions: 3264x1400 (or 1500?)
+// NOPE NOT THIS = Banner image dimensions: 3264x1400 (or 1500?)
 
 Banner image dimensions: 640 × 294
+500 px is a good width for mid blog pics
