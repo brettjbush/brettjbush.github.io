@@ -199,7 +199,7 @@
 
     > li {
         margin-bottom: 0px;
-
+// Figure out how to highlight the whole post tab
         @include media-query($on-palm) {
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
         }
@@ -551,5 +551,11 @@ ul.nav.navbar-nav {
 
   &:visited {
     color: #FFFFFF;
+  }
+}
+
+.mid-post-link {
+  @include media-query(767px) {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15);
   }
 }
