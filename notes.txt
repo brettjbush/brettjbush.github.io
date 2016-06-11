@@ -2,3 +2,10 @@
 
 Banner image dimensions: 640 × 294
 500 px is a good width for mid blog pics
+http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/handmadepaper.png
+
+An image that is continuous and diagonal would need to have the following dimensions
+
+Height = h ()
+Width = w (even)
+Pixel Angle = n /
