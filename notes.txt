@@ -9,3 +9,9 @@ An image that is continuous and diagonal would need to have the following dimens
 Height = h ()
 Width = w (even)
 Pixel Angle = n /
+
+&#x1F604;
+
+Wink: &#x1F609;
+http://apps.timwhitlock.info/emoji/tables/unicode
+<script src="//twemoji.maxcdn.com/twemoji.min.js"></script>

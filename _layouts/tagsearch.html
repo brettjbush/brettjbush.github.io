@@ -19,15 +19,18 @@ title: "#Search"
       {% if letter != first_letter %}
         {% if letter != "NULL" %}
           </div>
+        </div>
         {% endif %}
         {% capture letter %}{{ first_letter }}{% endcapture %}
         <div>
           <h3 class="tag-letter-header">{{ letter }}</h3>
           <hr class="tag-header-horizontal-bar ">
+          <div class="tag-div">
       {% endif %}
         <a class="tag-link" href="{{ site.baseurl }}/tag/{{ tag }}/">
           #{{ tag }}
         </a>
+        &thinsp;
     {% endfor %}
   </div>
   </ul>

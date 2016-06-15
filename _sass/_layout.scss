@@ -548,7 +548,7 @@ ul.nav.navbar-nav {
 }
 
 .tag-link {
-  border: 1px solid $grey-color-light;
+  border: 1px solid $grey-color-midlight;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 4px;
@@ -610,4 +610,9 @@ ul.nav.navbar-nav {
       color: $grey-color-midlight;
     }
   }
+}
+
+.tag-div {
+  margin-top: 7px;
+  line-height: 190%;
 }
