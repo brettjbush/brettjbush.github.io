@@ -236,6 +236,7 @@
 .post-meta-title {
     font-size: 20px;
     color: $grey-color;
+    line-height: 105%;
 
     @include media-query($on-palm) {
       font-size: 16px;
