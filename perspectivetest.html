@@ -3,14 +3,15 @@
 <head>
   <script>
   
-  var alpha = document.getElementById("alpha");
-  var beta = document.getElementById("beta");
-  var gamma = document.getElementById("gamma");
   window.addEventListener("deviceorientation", function(event) {
           // process event.alpha, event.beta and event.gamma
-          alpha.innerHTML = event.alpha;
-          beta.innerHTML = event.beta;
-          gamma.innerHTML = event.gamma;
+          var alpha = document.getElementById("alpha");
+          var beta = document.getElementById("beta");
+          var gamma = document.getElementById("gamma");
+          
+          alpha.innerHTML = event.alpha.toString();
+          beta.innerHTML = event.beta.toString();
+          gamma.innerHTML = event.gamma.toString();
       }, true);
   </script>
 </head>
@@ -18,7 +19,7 @@
   <h1>Test</h1>
   <table>
     <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
-    <tr><td id="alpha"></td><td id="beta"></td><td id="gamma"></td></tr>
+    <tr><td id="alpha">0</td><td id="beta">0</td><td id="gamma">0</td></tr>
   </table>
 </body>
 </html>
