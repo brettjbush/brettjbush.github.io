@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+</head>
+<body>
+  <h1>Test</h1>
+  <table>
+    <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
+    <tr><td id="alpha">0</td><td id="beta">0</td><td id="gamma">0</td></tr>
+  </table>
+  
   <script>
   
   window.addEventListener("deviceorientation", function(event) {
@@ -14,12 +22,5 @@
           gamma.innerHTML = event.gamma.toString();
       }, true);
   </script>
-</head>
-<body>
-  <h1>Test</h1>
-  <table>
-    <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
-    <tr><td id="alpha">0</td><td id="beta">0</td><td id="gamma">0</td></tr>
-  </table>
 </body>
 </html>
