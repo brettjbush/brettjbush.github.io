@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    td {
+      width: 50px;
+    }
+  </style>
 </head>
 <body>
   <h1>Test</h1>
@@ -17,9 +22,18 @@
           var beta = document.getElementById("beta");
           var gamma = document.getElementById("gamma");
           
-          alpha.innerHTML = event.alpha.toString();
-          beta.innerHTML = event.beta.toString();
-          gamma.innerHTML = event.gamma.toString();
+          if(event.alpha != null)
+          {
+            alpha.innerHTML = Number(event.alpha).toFixed(2);
+          }
+          if(event.beta != null)
+          {
+            beta.innerHTML = Number(event.beta).toFixed(2);
+          }
+          if(event.gamma != null)
+          {
+            gamma.innerHTML = Number(event.gamma).toFixed(2);
+          }
       }, true);
   </script>
 </body>
