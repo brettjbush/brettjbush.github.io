@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+  
+  var alpha = document.getElementById("alpha");
+  var beta = document.getElementById("beta");
+  var gamma = document.getElementById("gamma");
+  window.addEventListener("deviceorientation", function(event) {
+          // process event.alpha, event.beta and event.gamma
+          alpha.innerHTML = event.alpha;
+          beta.innerHTML = event.beta;
+          gamma.innerHTML = event.gamma;
+      }, true);
+  </script>
 </head>
 <body>
   <h1>Test</h1>
+  <table>
+    <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
+    <tr><td id="alpha"></td><td id="beta"></td><td id="gamma"></td></tr>
+  </table>
 </body>
 </html>
