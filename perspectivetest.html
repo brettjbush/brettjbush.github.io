@@ -4,36 +4,68 @@
   <style>
     td {
       width: 50px;
+      padding: 5px;
+    }
+    table {
+      border-style: solid;
     }
   </style>
 </head>
 <body>
   <h1>Test</h1>
+  <h3>Current</h3>
   <table>
     <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
     <tr><td id="alpha">0</td><td id="beta">0</td><td id="gamma">0</td></tr>
   </table>
-
+  <h3>Delta from Original</h3>
+  <table>
+    <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
+    <tr><td id="delta-alpha">0</td><td id="delta-beta">0</td><td id="delta-gamma">0</td></tr>
+  </table>
   <script>
+
+  var alpha = document.getElementById("alpha");
+  var beta = document.getElementById("beta");
+  var gamma = document.getElementById("gamma");
+
+  var deltaAlpha = document.getElementById("deltaAlpha");
+  var deltaBeta = document.getElementById("deltaBeta");
+  var deltaGamma = document.getElementById("deltaGamma");
+
+  var originalAlpha = 0;
+  var originalBeta = 0;
+  var originalGamma = 0;
+  var first = true;
 
   window.addEventListener("deviceorientation", function(event) {
           // process event.alpha, event.beta and event.gamma
-          var alpha = document.getElementById("alpha");
-          var beta = document.getElementById("beta");
-          var gamma = document.getElementById("gamma");
+
+          if(first)
+          {
+            originalAlpha = Number(event.alpha).toFixed(1);
+            originalBeta = Number(event.beta).toFixed(1);
+            originalGamma = Number(event.gamma).toFixed(1);
+            first = false;
+          }
 
           if(event.alpha != null)
           {
             alpha.innerHTML = Number(event.alpha).toFixed(1);
+            deltaAlpha.innerHTML = Number(event.alpha).toFixed(1) - originalAlpha;
           }
           if(event.beta != null)
           {
             beta.innerHTML = Number(event.beta).toFixed(1);
+            deltaBeta.innerHTML = Number(event.beta).toFixed(1) - originalBeta;
           }
           if(event.gamma != null)
           {
             gamma.innerHTML = Number(event.gamma).toFixed(1);
+            deltaGamma.innerHTML = Number(event.gamma).toFixed(1) - originalGamma;
           }
+
+
       }, true);
   </script>
 </body>
