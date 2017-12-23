@@ -60,7 +60,7 @@
               newNum = (alphaNum % 180) - 180;
             }
             alpha.innerHTML = Number(newNum).toFixed(1);;
-            deltaAlpha.innerHTML = Number(Number(event.alpha).toFixed(1) - originalAlpha).toFixed(1);
+            deltaAlpha.innerHTML = Number(Number(newNum).toFixed(1) - originalAlpha).toFixed(1);
           }
           if(event.beta != null)
           {
