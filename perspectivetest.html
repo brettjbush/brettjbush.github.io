@@ -13,26 +13,26 @@
     <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
     <tr><td id="alpha">0</td><td id="beta">0</td><td id="gamma">0</td></tr>
   </table>
-  
+
   <script>
-  
+
   window.addEventListener("deviceorientation", function(event) {
           // process event.alpha, event.beta and event.gamma
           var alpha = document.getElementById("alpha");
           var beta = document.getElementById("beta");
           var gamma = document.getElementById("gamma");
-          
+
           if(event.alpha != null)
           {
-            alpha.innerHTML = Number(event.alpha).toFixed(2);
+            alpha.innerHTML = Number(event.alpha).toFixed(1);
           }
           if(event.beta != null)
           {
-            beta.innerHTML = Number(event.beta).toFixed(2);
+            beta.innerHTML = Number(event.beta).toFixed(1);
           }
           if(event.gamma != null)
           {
-            gamma.innerHTML = Number(event.gamma).toFixed(2);
+            gamma.innerHTML = Number(event.gamma).toFixed(1);
           }
       }, true);
   </script>
