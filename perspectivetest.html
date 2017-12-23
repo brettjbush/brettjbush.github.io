@@ -52,17 +52,17 @@
           if(event.alpha != null)
           {
             alpha.innerHTML = Number(event.alpha).toFixed(1);
-            deltaAlpha.innerHTML = Number(event.alpha).toFixed(1) - originalAlpha;
+            deltaAlpha.innerHTML = Number(Number(event.alpha).toFixed(1) - originalAlpha).toFixed(1);
           }
           if(event.beta != null)
           {
             beta.innerHTML = Number(event.beta).toFixed(1);
-            deltaBeta.innerHTML = Number(event.beta).toFixed(1) - originalBeta;
+            deltaBeta.innerHTML = Number(Number(event.beta).toFixed(1) - originalBeta).toFixed(1);
           }
           if(event.gamma != null)
           {
             gamma.innerHTML = Number(event.gamma).toFixed(1);
-            deltaGamma.innerHTML = Number(event.gamma).toFixed(1) - originalGamma;
+            deltaGamma.innerHTML = Number(Number(event.gamma).toFixed(1) - originalGamma).toFixed(1);
           }
 
 
