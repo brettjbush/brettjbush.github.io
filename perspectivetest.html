@@ -39,8 +39,6 @@
   var first = true;
 
   window.addEventListener("deviceorientation", function(event) {
-          // process event.alpha, event.beta and event.gamma
-
           if(first)
           {
             originalAlpha = Number(event.alpha).toFixed(1);
@@ -51,7 +49,17 @@
 
           if(event.alpha != null)
           {
-            alpha.innerHTML = Number(event.alpha).toFixed(1);
+            var alphaNum = Number(event.alpha).toFixed(1);
+            var newNum = 0;
+            if(alphaNum <= 180)
+            {
+              newNum = alphaNum;
+            }
+            else
+            {
+              newNum = (alphaNum % 180) - 180;
+            }
+            alpha.innerHTML = Number(newNum).toFixed(1);;
             deltaAlpha.innerHTML = Number(Number(event.alpha).toFixed(1) - originalAlpha).toFixed(1);
           }
           if(event.beta != null)
@@ -64,9 +72,11 @@
             gamma.innerHTML = Number(event.gamma).toFixed(1);
             deltaGamma.innerHTML = Number(Number(event.gamma).toFixed(1) - originalGamma).toFixed(1);
           }
-
-
       }, true);
+
+  function alertFunc() {
+
+  }
   </script>
 </body>
 </html>
