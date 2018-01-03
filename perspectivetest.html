@@ -102,14 +102,14 @@
             beta.innerHTML = Number(event.beta).toFixed(1);
             var deltaBetaValue = event.beta - originalBeta;
             deltaBeta.innerHTML = Number(deltaBetaValue).toFixed(1);
-            topDelta.innerHTML = Number(calcOffset(depthConstant, deltaBetaValue));
+            topDelta.innerHTML = Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(1);
           }
           if(event.gamma != null)
           {
             gamma.innerHTML = Number(event.gamma).toFixed(1);
             var deltaGammaValue = event.gamma - originalGamma;
             deltaGamma.innerHTML = Number(deltaGammaValue).toFixed(1);
-            leftDelta.innerHTML = Number(calcOffset(depthConstant, deltaGammaValue));
+            leftDelta.innerHTML = Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(1);
           }
 
           //Calculate Top Left
