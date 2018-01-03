@@ -52,7 +52,7 @@
 
   function calcOffset(depth, angle) {
 
-    var offsetValue = Math.tan(Math.abs(angle)) * depth;
+    var offsetValue = Math.tan(Math.abs(angle) * degtorad) * depth;
 
     if(angle < 0)
     {
