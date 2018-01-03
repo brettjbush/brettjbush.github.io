@@ -120,7 +120,7 @@
             var topOffsetValue = Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(1);
             topDelta.innerHTML = topOffsetValue;
             var newTopOffset = defaultBoxTop + topOffsetValue;
-            box.setAttribute("style", "top: " + newTopOffset + "px");
+            box.style.top = newTopOffset.toString() + "px";
           }
           if(event.gamma != null)
           {
@@ -130,7 +130,7 @@
             var leftOffsetValue = Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(1);
             leftDelta.innerHTML = leftOffsetValue;
             var newLeftOffset = defaultBoxLeft + leftOffsetValue;
-            box.setAttribute("style", "left: " + newLeftOffset + "px");
+            box.style.left = newLeftOffset.toString() + "px";
           }
 
           //Calculate Top Left
