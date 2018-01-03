@@ -9,6 +9,15 @@
     table {
       border-style: solid;
     }
+    .box {
+      position: absolute;
+      left: 70px;
+      top: 70px;
+      z-index: -1;
+      background-color: #00ff00;
+      width: 30px;
+      height: 30px;
+    }
   </style>
 </head>
 <body>
@@ -29,6 +38,8 @@
     <tr><td id="top-delta-2">0</td><td id="left-delta-2">0</td></tr>
   </table>
   <script>
+
+  <div class="box"></div>
 
   var alpha = document.getElementById("alpha");
   var beta = document.getElementById("beta");
