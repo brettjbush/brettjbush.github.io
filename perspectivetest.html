@@ -18,6 +18,15 @@
       width: 50px;
       height: 50px;
     }
+    .box-2 {
+      position: absolute;
+      left: 400px;
+      top: 500px;
+      z-index: -2;
+      background-color: #0000ff;
+      width: 50px;
+      height: 50px;
+    }
   </style>
 </head>
 <body>
@@ -38,6 +47,7 @@
     <tr><td id="top-delta-2">0</td><td id="left-delta-2">0</td></tr>
   </table>
   <div id="theBox" class="box"></div>
+  <div id="theBox2" class="box"></div>
   <script>
 
   var alpha = document.getElementById("alpha");
@@ -52,11 +62,13 @@
   var leftDelta = document.getElementById("left-delta-2");
 
   var box = document.getElementById("theBox");
+  var box2 = document.getElementById("theBox2");
 
   var defaultBoxTop = 500;
   var defaultBoxLeft = 400;
 
   var depthConstant = 40;
+  var depthConstant2 = 80;
 
   var originalAlpha = 0;
   var originalBeta = 0;
@@ -121,6 +133,9 @@
             topDelta.innerHTML = topOffsetValue;
             var newTopOffset = defaultBoxTop - calcOffset(depthConstant, deltaBetaValue);
             box.style.top = Number(newTopOffset).toFixed(0) + "px";
+            
+            var newTopOffset2 = defaultBoxTop - calcOffset(depthConstant2, deltaBetaValue);
+            box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
           }
           if(event.gamma != null)
           {
@@ -131,6 +146,9 @@
             leftDelta.innerHTML = leftOffsetValue;
             var newLeftOffset = defaultBoxLeft + calcOffset(depthConstant, deltaGammaValue);
             box.style.left = Number(newLeftOffset).toFixed(0) + "px";
+            
+            var newLeftOffset2 = defaultBoxLeft + calcOffset(depthConstant2, deltaGammaValue);
+            box2.style.left = Number(newLeftOffset2).toFixed(0) + "px";
           }
 
           //Calculate Top Left
