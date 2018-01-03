@@ -23,6 +23,16 @@
     <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
     <tr><td id="delta-alpha">0</td><td id="delta-beta">0</td><td id="delta-gamma">0</td></tr>
   </table>
+  <h3>Compass Heading</h3>
+  <table>
+    <tr><th>Alpha</th><th>Beta</th><th>Gamma</th></tr>
+    <tr><td id="delta-alpha">0</td><td id="delta-beta">0</td><td id="delta-gamma">0</td></tr>
+  </table>
+  <h3>Offset Delta=2</h3>
+  <table>
+    <tr><th>Top</th><th>Left</th></tr>
+    <tr><td id="top-delta-2">0</td><td id="left-delta-2">0</td></tr>
+  </table>
   <script>
 
   var alpha = document.getElementById("alpha");
@@ -33,10 +43,60 @@
   var deltaBeta = document.getElementById("delta-beta");
   var deltaGamma = document.getElementById("delta-gamma");
 
+  var topDelta = document.getElementById("top-delta-2");
+  var leftDelta = document.getElementById("left-delta-2");
+
+  var depthConstant = 2;
+
   var originalAlpha = 0;
   var originalBeta = 0;
   var originalGamma = 0;
   var first = true;
+
+  var degtorad = Math.PI / 180; // Degree-to-Radian conversion
+
+  function compassHeading( alpha, beta, gamma ) {
+
+    var _x = beta  ? beta  * degtorad : 0; // beta value
+    var _y = gamma ? gamma * degtorad : 0; // gamma value
+    var _z = alpha ? alpha * degtorad : 0; // alpha value
+
+    var cX = Math.cos( _x );
+    var cY = Math.cos( _y );
+    var cZ = Math.cos( _z );
+    var sX = Math.sin( _x );
+    var sY = Math.sin( _y );
+    var sZ = Math.sin( _z );
+
+    // Calculate Vx and Vy components
+    var Vx = - cZ * sY - sZ * sX * cY;
+    var Vy = - sZ * sY + cZ * sX * cY;
+
+    // Calculate compass heading
+    var compassHeading = Math.atan( Vx / Vy );
+
+    // Convert compass heading to use whole unit circle
+    if( Vy < 0 ) {
+      compassHeading += Math.PI;
+    } else if( Vx < 0 ) {
+      compassHeading += 2 * Math.PI;
+    }
+
+    return compassHeading * ( 180 / Math.PI ); // Compass Heading (in degrees)
+
+  }
+
+  function calcOffset(depth, angle) {
+
+    var offsetValue = Math.tan(Math.abs(angle)) * depth;
+
+    if(angle < 0)
+    {
+      offsetValue = offsetValue * -1;
+    }
+
+    return offsetValue;
+  }
 
   window.addEventListener("deviceorientation", function(event) {
           if(first)
@@ -70,18 +130,29 @@
               newNum = (alphaNum % 180) - 180;
             }
             alpha.innerHTML = Number(newNum).toFixed(1);
-            deltaAlpha.innerHTML = Number(newNum - originalAlpha).toFixed(1);
+            var deltaAlphaValue = newNum - originalAlpha;
+            deltaAlpha.innerHTML = Number(deltaAlphaValue).toFixed(1);
           }
           if(event.beta != null)
           {
             beta.innerHTML = Number(event.beta).toFixed(1);
-            deltaBeta.innerHTML = Number(event.beta - originalBeta).toFixed(1);
+            var deltaBetaValue = event.beta - originalBeta;
+            deltaBeta.innerHTML = Number(deltaBetaValue).toFixed(1);
+            topDelta.innerHTML = Number(calcOffset(depthConstant, deltaBetaValue));
           }
           if(event.gamma != null)
           {
             gamma.innerHTML = Number(event.gamma).toFixed(1);
-            deltaGamma.innerHTML = Number(event.gamma - originalGamma).toFixed(1);
+            var deltaGammaValue = event.gamma - originalGamma;
+            deltaGamma.innerHTML = Number(deltaGammaValue).toFixed(1);
+            leftDelta.innerHTML = Number(calcOffset(depthConstant, deltaGammaValue));
           }
+
+          //Calculate Top Left
+
+          // Background Plane = -2
+          event.
+
       }, true);
 
   function alertFunc() {
