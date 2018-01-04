@@ -33,9 +33,7 @@
       box-shadow: 0px 0px 20px #888888;
     }
     .basic-box {
-      width: 300px;
-      height: 200px;
-      margin-left: 20px;
+      margin-top: 200px;
     }
     body {
       padding-left: 20px;
@@ -168,7 +166,7 @@
             var newTopOffset2 = defaultBoxTop - calcOffset(depthConstant2, deltaBetaValue);
             //box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
             
-            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue)).toFixed(0));
+            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue + 20)).toFixed(0));
           }
           if(event.gamma != null)
           {
