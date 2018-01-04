@@ -27,6 +27,11 @@
       width: 50px;
       height: 50px;
     }
+    .shadow-box {
+      border: 1px solid;
+      padding: 10px;
+      box-shadow: 0px 0px 20px #888888;
+    }
   </style>
 </head>
 <body>
@@ -46,8 +51,9 @@
     <tr><th>Top</th><th>Left</th></tr>
     <tr><td id="top-delta-2">0</td><td id="left-delta-2">0</td></tr>
   </table>
-  <div id="theBox" class="box"></div>
-  <div id="theBox2" class="box-2"></div>
+  <!--<div id="theBox" class="box"></div>
+  <div id="theBox2" class="box-2"></div>-->
+  <div class="shadow-box"><p>Hello World</p></div>
   <script>
 
   var alpha = document.getElementById("alpha");
@@ -63,6 +69,8 @@
 
   var box = document.getElementById("theBox");
   var box2 = document.getElementById("theBox2");
+    
+  var shadowBoxes = document.getElementByClass("shadow-box");
 
   var defaultBoxTop = 500;
   var defaultBoxLeft = 400;
@@ -73,6 +81,11 @@
   var originalAlpha = 0;
   var originalBeta = 0;
   var originalGamma = 0;
+    
+    
+  var currentBeta = 0;
+  var currentGamma = 0;
+  
   var first = true;
 
   var degtorad = Math.PI / 180; // Degree-to-Radian conversion
@@ -132,10 +145,12 @@
             var topOffsetValue = Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(1);
             topDelta.innerHTML = topOffsetValue;
             var newTopOffset = defaultBoxTop - calcOffset(depthConstant, deltaBetaValue);
-            box.style.top = Number(newTopOffset).toFixed(0) + "px";
+            //box.style.top = Number(newTopOffset).toFixed(0) + "px";
             
             var newTopOffset2 = defaultBoxTop - calcOffset(depthConstant2, deltaBetaValue);
-            box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
+            //box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
+            
+            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue)).toFixed(0));
           }
           if(event.gamma != null)
           {
@@ -145,13 +160,19 @@
             var leftOffsetValue = Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(1);
             leftDelta.innerHTML = leftOffsetValue;
             var newLeftOffset = defaultBoxLeft + calcOffset(depthConstant, deltaGammaValue);
-            box.style.left = Number(newLeftOffset).toFixed(0) + "px";
+            //box.style.left = Number(newLeftOffset).toFixed(0) + "px";
             
             var newLeftOffset2 = defaultBoxLeft + calcOffset(depthConstant2, deltaGammaValue);
-            box2.style.left = Number(newLeftOffset2).toFixed(0) + "px";
+            //box2.style.left = Number(newLeftOffset2).toFixed(0) + "px";
+            
+            currentGamma = parseInt(Number(calcOffset(depthConstant2, deltaGammaValue)).toFixed(0));
+            
           }
 
-          //Calculate Top Left
+          for(int i = 0; i < shadowBoxes.length; i++)
+          {
+            shadowBoxes[i].style.boxShadow = currentBeta.toString() + "px " + currentGamma.toString() + "px 20px #888888";
+          }
 
       }, true);
 
