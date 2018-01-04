@@ -101,6 +101,9 @@
     
   var currentBeta = 0;
   var currentGamma = 0;
+    
+  var initDiffFromUpBeta = 0;
+  var initDiffFromUpGamma = 0;
   
   var first = true;
 
@@ -134,6 +137,10 @@
             originalAlpha = Number(initNewNum).toFixed(1);
             originalBeta = Number(event.beta).toFixed(1);
             originalGamma = Number(event.gamma).toFixed(1);
+            
+            initDiffFromUpBeta = event.beta;
+            initDiffFromUpGamma = event.gamma;
+            
             first = false;
           }
 
@@ -166,7 +173,7 @@
             var newTopOffset2 = defaultBoxTop - calcOffset(depthConstant2, deltaBetaValue);
             //box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
             
-            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue + 20)).toFixed(0));
+            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue + initDiffFromUpBeta)).toFixed(0));
           }
           if(event.gamma != null)
           {
@@ -181,7 +188,7 @@
             var newLeftOffset2 = defaultBoxLeft + calcOffset(depthConstant2, deltaGammaValue);
             //box2.style.left = Number(newLeftOffset2).toFixed(0) + "px";
             
-            currentGamma = parseInt(Number(calcOffset(depthConstant2, deltaGammaValue)).toFixed(0));
+            currentGamma = parseInt(Number(calcOffset(depthConstant2, deltaGammaValue + initDiffFromUpGamma)).toFixed(0));
             
           }
 
