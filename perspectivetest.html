@@ -93,6 +93,7 @@
 
   var depthConstant = 40;
   var depthConstant2 = 80;
+  var depthConstantSmall = 15;
 
   var originalAlpha = 0;
   var originalBeta = 0;
@@ -173,7 +174,7 @@
             var newTopOffset2 = defaultBoxTop - calcOffset(depthConstant2, deltaBetaValue);
             //box2.style.top = Number(newTopOffset2).toFixed(0) + "px";
             
-            currentBeta = parseInt(Number(calcOffset(depthConstant2, deltaBetaValue + initDiffFromUpBeta)).toFixed(0));
+            currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue + initDiffFromUpBeta)).toFixed(0));
           }
           if(event.gamma != null)
           {
@@ -188,7 +189,7 @@
             var newLeftOffset2 = defaultBoxLeft + calcOffset(depthConstant2, deltaGammaValue);
             //box2.style.left = Number(newLeftOffset2).toFixed(0) + "px";
             
-            currentGamma = parseInt(Number(calcOffset(depthConstant2, deltaGammaValue + initDiffFromUpGamma)).toFixed(0));
+            currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue + initDiffFromUpGamma)).toFixed(0));
             
           }
 
