@@ -56,6 +56,6 @@ window.addEventListener("deviceorientation", function(event) {
   // Apply change to all leviosa boxes
   for(i = 0; i < leviosaBoxes.length; i++)
   {
-    leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(136, 136, 136, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+    leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
   }
 }, true);
