@@ -9,10 +9,6 @@ var depthConstant2 = 80;
 var currentBeta = 0;
 var currentGamma = 0;
 
-// Difference from start angle to "up"
-//var initDiffFromUpBeta = 0;
-//var initDiffFromUpGamma = 0;
-
 // Marker to check first
 var first = true;
 
@@ -35,21 +31,11 @@ function calcOffset(depth, angle) {
 
 // Triggered on device tilt
 window.addEventListener("deviceorientation", function(event) {
-  
-  // Initialize where "up" is
-  if(first)
-  {
-    //initDiffFromUpBeta = event.beta;
-    //initDiffFromUpGamma = event.gamma;
 
-    first = false;
-  }
-  
   // Vertical tilt
   if(event.beta != null)
   {
     var deltaBetaValue = event.beta;
-    //currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue + initDiffFromUpBeta)).toFixed(0));
     currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(0));
   }
   
@@ -57,7 +43,6 @@ window.addEventListener("deviceorientation", function(event) {
   if(event.gamma != null)
   {
     var deltaGammaValue = event.gamma;
-    //currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue + initDiffFromUpGamma)).toFixed(0));
     currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(0));
   }
   
