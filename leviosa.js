@@ -9,6 +9,8 @@ var depthConstant2 = 80;
 var currentBeta = 0;
 var currentGamma = 0;
 
+var currentBetaDegrees = 0;
+
 // Marker to check first
 var first = true;
 
@@ -29,6 +31,10 @@ function calcOffset(depth, angle) {
   return offsetValue;
 }
 
+function calcOpacity(betaAngle) {
+  return 1 - (Math.abs(betaAngle) / 90);
+}
+
 // Triggered on device tilt
 window.addEventListener("deviceorientation", function(event) {
 
@@ -37,6 +43,7 @@ window.addEventListener("deviceorientation", function(event) {
   {
     var deltaBetaValue = event.beta;
     currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(0));
+    currentBetaDegrees = deltaBetaValue;
   }
   
   // Horizontal tilt
@@ -49,6 +56,6 @@ window.addEventListener("deviceorientation", function(event) {
   // Apply change to all leviosa boxes
   for(i = 0; i < leviosaBoxes.length; i++)
   {
-    leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(136, 136, 136, 1)";
+    leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(136, 136, 136, " + Number(calcOpacity(currentBetaDegrees)).toFixed(1) + ")";
   }
 }, true);
