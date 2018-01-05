@@ -56,6 +56,12 @@ window.addEventListener("deviceorientation", function(event) {
   // Apply change to all leviosa boxes
   for(i = 0; i < leviosaBoxes.length; i++)
   {
-    leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+    if (Math.abs(window.orientation) === 90) {
+      leviosaBoxes[i].style.boxShadow = currentBeta.toString() + "px " + currentGamma.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+    } else {
+    	// Portrait
+      leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+    }
+    
   }
 }, true);
