@@ -32,8 +32,8 @@ function calcOffset(depth, angle) {
   return offsetValue;
 }
 
-function calcOpacity(betaAngle) {
-  return 1 - (Math.abs(betaAngle) / 90);
+function calcOpacity(betaAngle, gammaAngle) {
+  return 1 - (Math.min(Math.abs(betaAngle), Math.abs(gammaAngle)) / 90);
 }
 
 // Triggered on device tilt
@@ -59,10 +59,10 @@ window.addEventListener("deviceorientation", function(event) {
   for(i = 0; i < leviosaBoxes.length; i++)
   {
     if (Math.abs(window.orientation) === 90) {
-      leviosaBoxes[i].style.boxShadow = (-1 * currentBeta.toString()) + "px " + currentGamma.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentGammaDegrees)).toFixed(3) + ")";
+      leviosaBoxes[i].style.boxShadow = (-1 * currentBeta.toString()) + "px " + currentGamma.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees, currentGammaDegrees)).toFixed(3) + ")";
     } else {
     	// Portrait
-      leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+      leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees, currentGammaDegrees)).toFixed(3) + ")";
     }
     
   }
