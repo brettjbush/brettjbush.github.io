@@ -33,7 +33,7 @@ function calcOffset(depth, angle) {
 }
 
 function calcOpacity() {
-  return 1 - (Math.sqrt(Math.abs(currentGamma * currentGamma) + (2 * Math.abs(currentBeta * currentBeta))) / 90);
+  return 1 - (Math.sqrt(Math.abs(currentGamma * currentGamma) + (Math.abs(currentBeta * currentBeta) / 2)) / 90);
 }
 
 // Triggered on device tilt
