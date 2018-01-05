@@ -39,8 +39,8 @@ window.addEventListener("deviceorientation", function(event) {
   // Initialize where "up" is
   if(first)
   {
-    originalBeta = Number(event.beta).toFixed(1);
-    originalGamma = Number(event.gamma).toFixed(1);
+    //originalBeta = Number(event.beta).toFixed(1);
+    //originalGamma = Number(event.gamma).toFixed(1);
 
     initDiffFromUpBeta = event.beta;
     initDiffFromUpGamma = event.gamma;
@@ -51,14 +51,14 @@ window.addEventListener("deviceorientation", function(event) {
   // Vertical tilt
   if(event.beta != null)
   {
-    var deltaBetaValue = event.beta - originalBeta;
+    var deltaBetaValue = event.beta;// - originalBeta;
     currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue + initDiffFromUpBeta)).toFixed(0));
   }
   
   // Horizontal tilt
   if(event.gamma != null)
   {
-    var deltaGammaValue = event.gamma - originalGamma;
+    var deltaGammaValue = event.gamma;// - originalGamma;
     currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue + initDiffFromUpGamma)).toFixed(0));
   }
   
