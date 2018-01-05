@@ -2,8 +2,9 @@
 var leviosaBoxes = document.getElementsByClassName("leviosa");
 
 // Various depth constants for shadows (distance to background in pixels)
-var depthConstant = 40;
-var depthConstant2 = 80;
+var depthConstantMinima = 10;
+var depthConstantDefault = 25;
+var depthConstantMaxima = 40;
 
 // The current vertical and horizontal tilts
 var currentBeta = 0;
@@ -43,7 +44,7 @@ window.addEventListener("deviceorientation", function(event) {
   if(event.beta != null)
   {
     var deltaBetaValue = event.beta;
-    currentBeta = parseInt(Number(calcOffset(depthConstant, deltaBetaValue)).toFixed(0));
+    currentBeta = parseInt(Number(calcOffset(depthConstantDefault, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
   
@@ -51,7 +52,7 @@ window.addEventListener("deviceorientation", function(event) {
   if(event.gamma != null)
   {
     var deltaGammaValue = event.gamma;
-    currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(0));
+    currentGamma = parseInt(Number(calcOffset(depthConstantDefault, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
   }
   
