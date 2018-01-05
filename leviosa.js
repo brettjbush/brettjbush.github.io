@@ -32,8 +32,8 @@ function calcOffset(depth, angle) {
   return offsetValue;
 }
 
-function calcOpacity(betaAngle) {
-  return 1 - (Math.abs(betaAngle) / 90);
+function calcOpacity() {
+  return 1 - (Math.sqrt(Math.abs(currentGamma * currentGamma) + Math.abs(currentBeta * currentBeta)) / 90);
 }
 
 // Triggered on device tilt
