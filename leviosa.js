@@ -32,7 +32,7 @@ function calcOffset(depth, angle) {
   return offsetValue;
 }
 
-function calcOpacity() {
+function calcOpacity(betaAngle) {
   return 1 - (Math.abs(betaAngle) / 90);
 }
 
