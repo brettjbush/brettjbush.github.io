@@ -10,6 +10,7 @@ var currentBeta = 0;
 var currentGamma = 0;
 
 var currentBetaDegrees = 0;
+var currentGammaDegrees = 0;
 
 // Marker to check first
 var first = true;
@@ -51,13 +52,14 @@ window.addEventListener("deviceorientation", function(event) {
   {
     var deltaGammaValue = event.gamma;
     currentGamma = parseInt(Number(calcOffset(depthConstant, deltaGammaValue)).toFixed(0));
+    currentGammaDegrees = deltaGammaValue;
   }
   
   // Apply change to all leviosa boxes
   for(i = 0; i < leviosaBoxes.length; i++)
   {
     if (Math.abs(window.orientation) === 90) {
-      leviosaBoxes[i].style.boxShadow = currentBeta.toString() + "px " + currentGamma.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
+      leviosaBoxes[i].style.boxShadow = (-1 * currentBeta.toString()) + "px " + currentGamma.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentGammaDegrees)).toFixed(3) + ")";
     } else {
     	// Portrait
       leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees)).toFixed(3) + ")";
