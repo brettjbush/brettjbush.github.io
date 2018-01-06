@@ -56,7 +56,7 @@ window.addEventListener("deviceorientation", function(event) {
   // Vertical tilt
   if(event.beta != null)
   {
-    var deltaBetaValue = event.beta - originalBeta;
+    var deltaBetaValue = event.beta + originalBeta;
     currentBeta = parseInt(Number(calcOffset(depthConstantDefault, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
