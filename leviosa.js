@@ -18,8 +18,9 @@ var currentGammaDegrees = 0;
 var originalBeta = 0;
 var originalGamma = 0;
 
-// Marker to check first
-var first = true;
+// Markers to check first
+var firstBeta = true;
+var firstGamma = true;
 
 // Convert multiply to degrees to get radians
 var degtorad = Math.PI / 180;
@@ -45,17 +46,14 @@ function calcOpacity(betaAngle, gammaAngle) {
 // Triggered on device tilt
 window.addEventListener("deviceorientation", function(event) {
 
-  if(first)
-  {
-    originalBeta = event.beta;
-    originalGamma = event.gamma;
-
-    first = false;
-  }
-
   // Vertical tilt
   if(event.beta != null)
   {
+    if(firstBeta)
+    {
+      originalBeta = event.beta;
+      firstBeta = false;
+    }
     var deltaBetaValue = event.beta - originalBeta;
     currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
@@ -64,6 +62,11 @@ window.addEventListener("deviceorientation", function(event) {
   // Horizontal tilt
   if(event.gamma != null)
   {
+    if(firstGamma)
+    {
+      originalGamma = event.gamma;
+      firstGamma = false;
+    }
     var deltaGammaValue = event.gamma - originalGamma;
     currentGamma = parseInt(Number(calcOffset(depthConstantMaxima, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
