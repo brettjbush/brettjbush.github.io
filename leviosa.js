@@ -15,12 +15,12 @@ var currentBetaDegrees = 0;
 var currentGammaDegrees = 0;
 
 // Original Degrees
-var originalBeta = 0;
-var originalGamma = 0;
+//var originalBeta = 0;
+//var originalGamma = 0;
 
 // Markers to check first
-var firstBeta = true;
-var firstGamma = true;
+//var firstBeta = true;
+//var firstGamma = true;
 
 // Convert multiply to degrees to get radians
 var degtorad = Math.PI / 180;
@@ -49,25 +49,31 @@ window.addEventListener("deviceorientation", function(event) {
   // Vertical tilt
   if(event.beta != null)
   {
+    /*
     if(firstBeta)
     {
       originalBeta = event.beta;
       firstBeta = false;
     }
     var deltaBetaValue = event.beta - originalBeta;
-    currentBeta = -1 * parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
-    currentBetaDegrees = -1 * deltaBetaValue;
+    */
+    var deltaBetaValue = event.beta;
+    currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
+    currentBetaDegrees = deltaBetaValue;
   }
 
   // Horizontal tilt
   if(event.gamma != null)
   {
+    /*
     if(firstGamma)
     {
       originalGamma = event.gamma;
       firstGamma = false;
     }
     var deltaGammaValue = event.gamma - originalGamma;
+    */
+    var deltaGammaValue = event.gamma;
     currentGamma = parseInt(Number(calcOffset(depthConstantMaxima, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
   }
