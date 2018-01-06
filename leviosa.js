@@ -6,12 +6,17 @@ var depthConstantMinima = 10;
 var depthConstantDefault = 25;
 var depthConstantMaxima = 40;
 
-// The current vertical and horizontal tilts
+// The current vertical and horizontal offsets
 var currentBeta = 0;
 var currentGamma = 0;
 
+// Current angle in degrees
 var currentBetaDegrees = 0;
 var currentGammaDegrees = 0;
+
+// Original Degrees
+var originalBeta = 0;
+var originalGamma = 0;
 
 // Marker to check first
 var first = true;
@@ -21,10 +26,10 @@ var degtorad = Math.PI / 180;
 
 // Calculate the shadow offset from angle
 function calcOffset(depth, angle) {
-  
+
   // Tangent * Adjacent = Opposite
   var offsetValue = Math.tan(Math.abs(angle) * degtorad) * depth;
-  
+
   // Account for correct shadow direction
   if(angle < 0)
   {
@@ -40,22 +45,30 @@ function calcOpacity(betaAngle, gammaAngle) {
 // Triggered on device tilt
 window.addEventListener("deviceorientation", function(event) {
 
+  if(first)
+  {
+    originalBeta = event.beta;
+    originalGamma = event.gamma;
+
+    first = false;
+  }
+
   // Vertical tilt
   if(event.beta != null)
   {
-    var deltaBetaValue = event.beta;
+    var deltaBetaValue = event.beta - originalBeta;
     currentBeta = parseInt(Number(calcOffset(depthConstantDefault, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
-  
+
   // Horizontal tilt
   if(event.gamma != null)
   {
-    var deltaGammaValue = event.gamma;
+    var deltaGammaValue = event.gamma - originalGamma;
     currentGamma = parseInt(Number(calcOffset(depthConstantDefault, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
   }
-  
+
   // Apply change to all leviosa boxes
   for(i = 0; i < leviosaBoxes.length; i++)
   {
@@ -65,6 +78,6 @@ window.addEventListener("deviceorientation", function(event) {
     	// Portrait
       leviosaBoxes[i].style.boxShadow = currentGamma.toString() + "px " + currentBeta.toString() + "px 20px rgba(80, 80, 80, " + Number(calcOpacity(currentBetaDegrees, currentGammaDegrees)).toFixed(3) + ")";
     }
-    
+
   }
 }, true);
