@@ -57,7 +57,7 @@ window.addEventListener("deviceorientation", function(event) {
   if(event.beta != null)
   {
     var deltaBetaValue = event.beta - originalBeta;
-    currentBeta = parseInt(Number(calcOffset(depthConstantDefault, deltaBetaValue)).toFixed(0));
+    currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
 
@@ -65,7 +65,7 @@ window.addEventListener("deviceorientation", function(event) {
   if(event.gamma != null)
   {
     var deltaGammaValue = event.gamma - originalGamma;
-    currentGamma = parseInt(Number(calcOffset(depthConstantDefault, deltaGammaValue)).toFixed(0));
+    currentGamma = parseInt(Number(calcOffset(depthConstantMaxima, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
   }
 
