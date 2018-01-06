@@ -57,7 +57,7 @@ window.addEventListener("deviceorientation", function(event) {
     }
     var deltaBetaValue = event.beta - originalBeta;
     */
-    var deltaBetaValue = event.beta;
+    var deltaBetaValue = event.beta + 30;
     currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
