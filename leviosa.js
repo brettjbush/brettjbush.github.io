@@ -55,8 +55,8 @@ window.addEventListener("deviceorientation", function(event) {
       firstBeta = false;
     }
     var deltaBetaValue = event.beta - originalBeta;
-    currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
-    currentBetaDegrees = deltaBetaValue;
+    currentBeta = -1 * parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
+    currentBetaDegrees = -1 * deltaBetaValue;
   }
 
   // Horizontal tilt
