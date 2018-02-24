@@ -25,8 +25,22 @@ var currentGammaDegrees = 0;
 // Convert multiply to degrees to get radians
 var degtorad = Math.PI / 180;
 
-// Calculate the shadow offset from angle
-function calcOffset(depth, angle) {
+// Calculate the shadow offset from beta angle
+function calcBetaOffset(depth, angle) {
+
+  // Tangent * Adjacent = Opposite
+  var offsetValue = Math.tan(Math.abs(angle) * degtorad) * depth;
+
+  // Account for correct shadow direction
+  if(angle < 0)
+  {
+    offsetValue = offsetValue * -1;
+  }
+  return offsetValue;
+}
+
+// Calculate the shadow offset from gamma angle
+function calcGammaOffset(depth, angle) {
 
   // Tangent * Adjacent = Opposite
   var offsetValue = Math.tan(Math.abs(angle) * degtorad) * depth;
@@ -58,7 +72,7 @@ window.addEventListener("deviceorientation", function(event) {
     var deltaBetaValue = event.beta - originalBeta;
     */
     var deltaBetaValue = event.beta;
-    currentBeta = parseInt(Number(calcOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
+    currentBeta = parseInt(Number(calcBetaOffset(depthConstantMaxima, deltaBetaValue)).toFixed(0));
     currentBetaDegrees = deltaBetaValue;
   }
 
@@ -74,7 +88,7 @@ window.addEventListener("deviceorientation", function(event) {
     var deltaGammaValue = event.gamma - originalGamma;
     */
     var deltaGammaValue = event.gamma;
-    currentGamma = parseInt(Number(calcOffset(depthConstantMaxima, deltaGammaValue)).toFixed(0));
+    currentGamma = parseInt(Number(calcGammaOffset(depthConstantMaxima, deltaGammaValue)).toFixed(0));
     currentGammaDegrees = deltaGammaValue;
   }
 
