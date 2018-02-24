@@ -1,3 +1,8 @@
+/**
+ * @file leviosa main JS file
+ * @copyright Brett Bush 2018
+ */
+
 // Obtain leviosa boxes
 var leviosaBoxes = document.getElementsByClassName("leviosa");
 
