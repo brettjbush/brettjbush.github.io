@@ -2,3 +2,21 @@
 ---
 
 @import 'bootstrap/bootstrap';
+
+@include media-breakpoint-up(sm) {
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
