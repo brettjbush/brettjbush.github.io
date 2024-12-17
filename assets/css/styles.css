@@ -1,0 +1,15 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+.hero.is-primary {
+    background-color: #3273dc;
+    color: white;
+}
+.box {
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+.box:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}

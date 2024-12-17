@@ -1,0 +1,8 @@
+- name: Demos
+  url: /demos/
+- name: Guides
+  url: /guides/
+- name: Use Cases
+  url: /use-cases/
+- name: About
+  url: /about/

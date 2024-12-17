@@ -1,0 +1,207 @@
+---
+layout: default
+---
+
+<img src="{{site.baseurl}}/assets/img/natalie0.jpg" style="display:none;" alt="...">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">I’m <b>Brett Bush</b>, a <span class="text-info">developer</span> and <span class="text-success">full stack creative</span> living in Chicagoland.</h1>
+    <!--<p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+  </div>
+</div>
+<div class="container">
+  <div class="row mb-2">
+    <div class="col">
+      <h1 class="text-center mb-4">Games</h1>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/lofive-icon.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">LoFive</h5>
+              <p class="card-text">LoFive is an iOS tile game played by stacking tiles onto a grid. Tile values must stay below 5 or it's Game Over!</p>
+              <span class="badge badge-pill badge-info">Swift</span>
+              <span class="badge badge-pill badge-info">XCode</span>
+              <span class="badge badge-pill badge-info">iOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/project-sparkle-icon.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Project Sparkle</h5>
+              <p class="card-text">Project Sparkle is a sandbox adventure game featuring a small cloud's quest to return the stars to the sky.</p>
+              <span class="badge badge-pill badge-secondary">In Development</span>
+              <span class="badge badge-pill badge-info">Unity</span>
+              <span class="badge badge-pill badge-info">C#</span>
+              <span class="badge badge-pill badge-info">Blender</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/project-swirl-icon.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Project Swirl</h5>
+              <p class="card-text">Project Swirl is a 2D metroidvania featuring an innovative attack system.</p>
+              <span class="badge badge-pill badge-secondary">In Development</span>
+              <span class="badge badge-pill badge-info">Unity</span>
+              <span class="badge badge-pill badge-info">C#</span>
+              <span class="badge badge-pill badge-info">Blender</span>
+              <span class="badge badge-pill badge-info">GIMP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/all-games.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">All Games</h5>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <div class="row mb-2">
+    <div class="col">
+      <h2 class="text-center mb-4">Art & Animation</h2>
+
+      <div class="card-deck">
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">All Art & Animation</h5>
+      <a href="#" class="btn btn-primary">View</a>
+    </div>
+  </div>
+-->
+  <div class="row mb-2">
+    <div class="col">
+      <h1 class="text-center mb-4">Music</h1>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <iframe class="card-img" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/686825098&color=%23cccccc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Adventure Level - Sample</h5>
+              <p class="card-text">This work strives to evoke feelings of adventure, excitement, and exploration to accompany a large sandbox style of level.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <iframe class="card-img" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/686609179&color=%23cccccc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Battle Theme - Sample</h5>
+              <p class="card-text">The piece takes inspiration from early Final Fantasy battle theme songs by Nobuo Uematsu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <iframe class="card-img" width="100%" height="100%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/687100564&color=%23cccccc&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Shop Theme - Sample</h5>
+              <p class="card-text">An easy, breezy melody to accompany your local small town NPC shopkeeper as they bop side to side in their idle animation waiting to sell or buy items on your quest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/all-music-icon.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">All Music</h5>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<i class="fas fa-thumbs-up fa-2x"></i>-->
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col">
+      <h2 class="text-center mb-4">Background</h2>
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="{{site.baseurl}}/assets/img/all-music-icon.png" class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">About Me</h5>
+              <p class="card-text">Lorem ipsum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
